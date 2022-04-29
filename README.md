@@ -1,3 +1,3 @@
 Simple Keeper APP made with React
 
-![image](https://user-images.githubusercontent.com/24259502/164252741-f0305a1e-1f8d-4796-bc41-98c04f313d3f.png)
+![image](https://user-images.githubusercontent.com/24259502/165973787-c3a887d0-5e83-431f-8cc7-626016365931.png)
