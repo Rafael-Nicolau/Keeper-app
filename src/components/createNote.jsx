@@ -1,8 +1,8 @@
 import React from "react";
 import Note from "./Note";
 
-function CreateNote(note) {
-  return <Note id={note.id} title={note.title} content={note.content} />;
+function CreateNote(props) {
+  return <Note id={props.id} title={props.title} content={props.content} deleteNote={props.deleteNote}/>;
 }
 
 export default CreateNote;

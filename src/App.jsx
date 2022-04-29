@@ -9,7 +9,7 @@ function App() {
     {
       title: "Delegation",
       content:
-        "Q. How many programmers does it take to change a light bulb? A. None – It’s a hardware problem",
+        "Q. How many programmers does it take to change a light bulb? A. None – It's a hardware problem",
     },
     {
       title: "Loops",
@@ -27,18 +27,33 @@ function App() {
         "What's the difference between hardware and software? You can hit your hardware with a hammer, but you can only curse at your software.",
     },
   ]);
-//Make input have a controled state and make button add note
+  //Make input have a controled state and make button add note
+  function addNote(inputTitle, inputContent) {
+    setNote((prevValue) => {
+      return [...prevValue, { title: inputTitle, content: inputContent }];
+    });
+  }
+
+  function deleteNote(id) {
+    const idNum = parseInt(id)
+    setNote((prevValue) => {
+      return prevValue.filter((item, index) => {
+        return index !== idNum;
+      });
+    });
+  }
 
   return (
     <div>
       <Header />
-      <CreateArea />
+      <CreateArea addNote={addNote} />
       {note.map((aNote, index) => (
         <CreateNote
           key={index}
           id={index}
           title={aNote.title}
           content={aNote.content}
+          deleteNote={deleteNote}
         />
       ))}
       <Footer />
